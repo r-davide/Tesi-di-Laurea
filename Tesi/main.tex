@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt,openright,twoside]{book}
+\usepackage[a4paper,margin=2in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\linespread{1.10}   
+\renewcommand{\arraystretch}{1.5}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\graphicspath{{img/}}
+\usepackage{fullpage}
+\usepackage{todonotes}
+\usepackage{graphics}
+\usepackage{lscape}
+\usepackage[nottoc]{tocbibind}
+\usepackage{enumerate}
+\usepackage{marginnote}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{listings}
+% comando per referenziare le varie sezioni dell'appendice
+\newcommand{\aref}[1]{[\ref{#1}]}
+
+\def\UrlBreaks{\do\/\do-}
+
+\setlength{\headsep}{0.35in}
+\let\MakeUppercase\relax
+\renewcommand\sectionmark[1]{}
+
+\frenchspacing
+\thispagestyle{plain}
+
+% rimuovo/ripristino l'head del capitolo
+\makeatletter
+\let\old@makechapterhead\@makechapterhead
+% Taken from http://mirrors.ctan.org/macros/latex/unpacked/report.cls
+\def\fake@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+        \huge\bfseries \strut%\@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\newcommand{\newchapterhead}{\let\@makechapterhead\fake@makechapterhead}
+\newcommand{\restorechapterhead}{\let\@makechapterhead\old@makechapterhead}
+\makeatother
+
+
+\begin{document}
+\frontmatter
+
+% FRONTESPIZIO
+\begin{titlepage}
+	
+	\noindent
+	\begin{minipage}[t]{0.18\textwidth}
+		\vspace{-4.5mm}{\includegraphics[scale=0.20]{img/logo_unimib.png}}
+	\end{minipage}
+	\begin{minipage}[t]{0.82\textwidth}
+		{
+			\setstretch{1.42}{\textsc{Università degli Studi di Milano - Bicocca} } \\
+			\textbf{Scuola di Scienze} \\
+			\textbf{Dipartimento di Informatica, Sistemistica e Comunicazione} \\
+			\textbf{Corso di Laurea in Informatica} \\
+			\par
+		}
+	\end{minipage}
+	
+	\vspace{35mm}
+	
+	\begin{center}
+		{\LARGE{
+				\setstretch{1.2}
+				\begin{center} \textbf{Tempo} \end{center}
+    			\textbf{ \Large { Progettazione e sviluppo di un'applicazione web gestionale basata su REST API. } }
+				\par
+		}}
+	\end{center}
+	
+	\vspace{50mm}
+	
+	\noindent
+	{\large \textbf{Relatore:} Prof. Claudio Zandron } \\
+	
+	\noindent
+	{\large \textbf{Co-relatore:} Dott.ssa Annalisa Marra (Sync Lab srl)}
+	
+	\vspace{15mm}
+	
+	\begin{flushright}
+		{\large \textbf{Relazione della prova finale di:}} \\
+		\vspace{1mm}
+		\large{Davide Raccuglia} \\
+		\vspace{1mm}
+		\large{Matricola 807160} 
+	\end{flushright}
+	
+	\vspace{20mm}
+	\begin{center}
+		{\large{\bf Anno Accademico 2019-2020}}
+	\end{center}
+	
+	\restoregeometry
+	
+\end{titlepage}
+
+\input other/iii-dedica
+\input other/v-abstract
+
+\cleardoublepage
+\tableofcontents
+\listoffigures{}
+
+\input includes
+
+\backmatter
+
+%\bibliographystyle{unsrtnat}
+%\bibliography{bibliografia}
+
+\end{document}

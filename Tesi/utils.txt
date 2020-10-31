@@ -1,0 +1,10 @@
+############################## STRUTTURA ##############################
+Guida stesura tesi:
+1.	Introduzione. Argomento della relazione, obiettivi e problemi che si vogliono affrontare.
+2.	Inquadramento argomenti (spiegazioni generali e nozioni utili per la comprensione)
+3.	Spiegazione dell’attività svolta. Suddividere i capitoli che si riferiscono alle singole attività
+4.	Conclusione. Obiettivi raggiunti e non raggiunti, sviluppi futuri.
+E' importante, nelle varie parti, giustificare sempre le scelte. Ad
+esempio: avevo a disposizione tecnologia 1, tecnologia 2 e tecnologia 3.
+Ho scelto tecnologia 1 perche' offre queste caratteristiche, mentre 2 e
+3 no (pur offrendo queste altre, che magari tecnologia 1 non ha).
